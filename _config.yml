@@ -38,7 +38,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -70,7 +70,7 @@ pagination_dir: page
 
 ## Themes: https://hexo.io/themes/        ##jacman
 # theme: jacman
-theme: next
+theme: nexmoe
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
