@@ -1,308 +1,145 @@
 <!DOCTYPE html>
 
+<html lang="zh-Hans">
 
-
+<head>
   
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+  <title>面试题集锦 - 70Qiang</title>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="description" content="随心 随笔 随想">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="面试题,集锦,OC,">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="70Qiang" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，">
-<meta name="keywords" content="面试题,集锦,OC">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题集锦">
-<meta property="og:url" content="http://yoursite.com/2016/03/24/面试题集锦/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%86%E9%94%A6/index.html">
 <meta property="og:site_name" content="70Qiang">
 <meta property="og:description" content="OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-03-25T05:33:01.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-03-24T02:45:18.000Z">
+<meta property="article:modified_time" content="2016-03-25T05:33:01.000Z">
+<meta property="article:author" content="70Qiang">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="集锦">
+<meta property="article:tag" content="OC">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试题集锦">
-<meta name="twitter:description" content="OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2016/03/24/面试题集锦/">
-
-
-
-
-
-  <title>面试题集锦 | 70Qiang</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
+  <link rel="stylesheet" href="/css/style.css?v=1616568501311">
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-
-
-
-
-
-
-
-</head>
-
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+<body class="mdui-drawer-body-left">
   
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">70Qiang</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="70Qiang" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="70Qiang"></a>
+       </div>
     </div>
-      
-        <p class="site-subtitle">随心 随笔</p>
-      
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="70Qiang">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="70Qiang" alt="70Qiang">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>7</div>
+        <div><span>Tags</span>14</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5CfKHun" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/BAT/" style="font-size: 10px;">BAT</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/KVO/" style="font-size: 10px;">KVO</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/OC/" style="font-size: 10px;">OC</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS%E6%B5%8B%E8%AF%95%E5%8C%85/" style="font-size: 10px;">iOS测试包</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/" style="font-size: 10px;">文件夹权限</a> <a href="/tags/%E7%9B%91%E5%90%AC/" style="font-size: 10px;">监听</a> <a href="/tags/%E9%9B%86%E9%94%A6/" style="font-size: 10px;">集锦</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 10px;">面试题</a>
+    </div>
+    
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 70Qiang
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
   </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="面试题集锦" class="lazyload">
+          <h1>面试题集锦</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2016年03月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 13 分钟</a>
 </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  <div class="nexmoe-post-right">
     
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/24/面试题集锦/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="70Qiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="70Qiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">面试题集锦</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-24T10:45:18+08:00">
-                2016-03-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，只是不再需要调用 retain release autorelease；它是编译时特性，当你启用ARC时，在适当的位置插入release和autorelease；它引用了strong和weak 关键字，strong修饰的指针变量指向对象时，当指针指向新值,或者指针不再存在时,相关联的对象就会自动释放，而weak修饰的指针变量指向对象，当对象的拥有者指向新值或者不存在时weak修饰的指针则自动置为nil，这是ARC管理机制</p>
+  <article>
+    <p>OC内存管理遵循“谁创建，谁释放。谁引用，谁管理”的机制，当创建或引用一个对象的时候，需要向它发送alloc  new copy retain 消息，当释放该对象时需要发送release消息，当该对象引用计数为0时，系统将释放该对象，这是OC的手动内存管理机制；iOS5.0之后OC又提供了自动管理机制，ARC(automatic reference counting)，管理机制跟手动管理机制一样，只是不再需要调用 retain release autorelease；它是编译时特性，当你启用ARC时，在适当的位置插入release和autorelease；它引用了strong和weak 关键字，strong修饰的指针变量指向对象时，当指针指向新值,或者指针不再存在时,相关联的对象就会自动释放，而weak修饰的指针变量指向对象，当对象的拥有者指向新值或者不存在时weak修饰的指针则自动置为nil，这是ARC管理机制</p>
 <p>线程和进程都是程序运行的基本单元,系统利用这些基本单元来实现系统对应用的并发性,<br>区别是他们是不同的操作系统的资源管理方式,进程有自己的地址空间,一个进程crash掉后,在保护模式下,不会对其他进程产生影响,而线程只是进程的不同的执行路径,它没有单独的地址空间,当一个线程Crash掉,整个进程就会crash掉,所以多进程的程序要比多线程的程序更健壮,但是进程之间的切换,耗资源比较大,所以执行效率要低一些,而当一些要求同时进行并且需要共享某些变量的并发操作时,只能使用多线程,不能使用多进程</p>
 <p>block是一个块语句，是一种回调机制，能完成对象与对象之间的通信，基于c语言实现，因为block是在栈上执行的，所以我们需要copy一份到堆上进行手动管理，局部使用时，在MRC机制下，要使用<strong>block修饰，（全局变量等同于局部变量+</strong>block）,在ARC机制下，要使用__weak进行修饰。</p>
 <p>static  有以下几条  修饰局部变量  只初始化一次  这个局部变量的作用域 只在这个方法哩  修饰全局变量  只在这个文件中使用    修饰方法  只能在这个文件内使用</p>
@@ -360,393 +197,84 @@ object = [test copy/retain];
 <p>ViewController的生命周期</p>
 <p>1.）loadView：根视图view为空时，且view被访问时调用<br>2.）viewDidLoad：在controller的view为nil时调⽤。此⽅法在编程实现view时 调用,view 控制器默认会注册memory warning notification,<br>3.）viewWillAppear，viewDidAppear，viewWillDisAppear，viewDidDisAppear</p>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的付出将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/b71ff8c3ly1fylb5pqlswj20go0p0god.jpg" alt="70Qiang 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/面试题/" rel="tag"># 面试题</a>
-          
-            <a href="/tags/集锦/" rel="tag"># 集锦</a>
-          
-            <a href="/tags/OC/" rel="tag"># OC</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/03/18/在Mac下通过HEXO在Github上搭建博客/" rel="next" title="在Mac下通过HEXO在Github上搭建博客">
-                <i class="fa fa-chevron-left"></i> 在Mac下通过HEXO在Github上搭建博客
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/22/iOS测试包自动分发，一键安装，效率提高百分百/" rel="prev" title="iOS测试包自动分发，一键安装，效率提高百分百">
-                iOS测试包自动分发，一键安装，效率提高百分百 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
 
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
   
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
     
-    <div class="sidebar-inner">
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>70Qiang<br>
+    <strong>Link：</strong><a href="http://yoursite.com/2016/03/24/%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%86%E9%94%A6/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2016&#x2F;03&#x2F;24&#x2F;%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%86%E9%94%A6&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2016&#x2F;03&#x2F;24&#x2F;%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%86%E9%94%A6&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
 
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/author.jpg" alt="70Qiang">
-            
-              <p class="site-author-name" itemprop="name">70Qiang</p>
-              <p class="site-description motion-element" itemprop="description">随心 随笔 随想</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">70Qiang</span>
 
   
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/OC/" rel="tag">OC</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E9%9B%86%E9%94%A6/" rel="tag">集锦</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a>
+    
 </div>
 
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+        <div class="nexmoe-post-right">
+          <div class="nexmoe-fixed">
+            <div class="nexmoe-tool">
+              <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ 
 
+<script src="/js/app.js?v=1616568501315"></script>
 
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
 
   
 
 
 
 
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
+
 </html>
