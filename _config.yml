@@ -31,16 +31,28 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true # Open external links in new tab
+  field: site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
+  tab_replace:
+  exclude_languages:
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
   tab_replace:
 
 # Category & Tag
@@ -69,8 +81,16 @@ pagination_dir: page
 
 
 ## Themes: https://hexo.io/themes/        ##jacman
-# theme: jacman
-theme: nexmoe
+# theme: butterfly
+theme: fluid
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

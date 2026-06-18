@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "framework": "hexo",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
